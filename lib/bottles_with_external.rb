@@ -7,7 +7,7 @@ class Bottles
 
   # num -> num -> string
   def verses(num1, num2)
-    [*num2..num1].reverse.inject([]){ |acc, el| acc << verse(el) }.join("\n")
+    [*num2..num1].reverse.map{ |el| verse(el) }.join("\n")
   end
 
   # num -> string
